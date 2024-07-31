@@ -7,7 +7,7 @@ const farmRouter = require('./router/farmRouter')
 
 const app = express();
 app.use(express.json());
-
+res.send("welcome to my api")
 app.use(farmRouter);
 
 mongoose.connect(URL)

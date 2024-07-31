@@ -74,10 +74,7 @@ const getOne = async(req, res)=>{
 const upDate = async(req, res)=>{
     try{
         const updateId = req.params.id
-       /* let matured = false
-if (Age >= 10){
-    matured = true
-}*/
+
         const updateAnimal = await farmModel.findByIdAndUpdate(updateId, req.body, {new:true})
          if(!updateAnimal) {
             res.status(400).json({
